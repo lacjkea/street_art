@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("_id");
-const url = "https://art8621-16e5.restdb.io/rest/streetart?" + id;
+const id = urlParams.get("id");
+const url = "https://art8621-16e5.restdb.io/rest/streetart/" + id;
 const options = {
   headers: {
     "x-apikey": "6137472c43cedb6d1f97edbb",
@@ -15,6 +15,7 @@ fetch(url, options)
     artlist(data);
   });
 function artlist(art) {
+  console.log("hey");
   console.log(art);
 
   document.querySelector(
